@@ -87,7 +87,7 @@ function arraysEqual(a, b) {
 
 
 setInterval(function () {
-  fetch("http://127.0.0.1:5600/get-update/")
+  fetch("/get-update/")
     .then((data) => data.json())
     .then((json) => {
       console.log(json.data.state);
