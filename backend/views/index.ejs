@@ -30,7 +30,7 @@
 
 <script>
 
-fetch("http://127.0.0.1:5600/update/" + JSON.stringify(['', '', '', '','', '', '', '', '']))
+fetch("/update/" + JSON.stringify(['', '', '', '','', '', '', '', '']))
   .then((data) => data.json())
   .then((json) => {
     console.log("success");
