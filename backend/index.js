@@ -1,11 +1,12 @@
 import express from "express";
 import cors from "cors";
 import mongoose, {Schema} from "mongoose";
+import ejs from "ejs";
 // ['x', '', '0', 'x', 'x', 'x', '', '0', '0']
 let db = mongoose.connect(
   "mongodb+srv://user:user@cluster0.nelnz2q.mongodb.net/?retryWrites=true&w=majority"
 );
-
+// ejs
 
 let schema = new Schema({
     state: Array
@@ -15,9 +16,10 @@ let xo = mongoose.model('xo', schema)
 
 let app = express();
 app.use(cors())
+app.set('view engine', 'ejs')
 
 app.get("/", function (req, res) {
-    res.send('Hello');
+    res.render('index.ejs')
 })
 
 

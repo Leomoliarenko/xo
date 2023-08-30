@@ -29,7 +29,7 @@ for (let i = 0; i < td.length; i++) {
         oldList = list;
 
       list = JSON.stringify(list);
-      fetch("http://127.0.0.1:5600/update/" + list)
+      fetch("https://xo1.onrender.com/update/" + list)
         .then((data) => data.json())
         .then((json) => {
           console.log("success");
